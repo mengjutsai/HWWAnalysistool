@@ -14,6 +14,9 @@ python Plotting_rev.py -f -i input/v4/20180702_R21_all_w_PRW_UpdateLumi_addActua
 * `--info` means to have an additional text (string) on the plot 
 
 
+![Plot](./Plotting_tool/example_plot/CutFF-nInteraction_new_1_03-emme-VBF.pdf)
+
+
 For comparison plot, you could create two different processes on the plot and draw the ratio for these different processes.
 
 `python Plotting_rev.py -c --i1 input/20180618_R21_mc16a_p3387_w_PRW_UpdateLumi_v2.root --i2 input/20180618_R21_mc16a_p3387_w_PRW_UpdateLumi_v2.root -o results/compare_v1 --p1 GGF --p2 VBF -n --sln GGF/VBF 
