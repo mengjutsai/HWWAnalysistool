@@ -13,6 +13,7 @@ python Plotting_rev.py -f -i input/v4/20180702_R21_all_w_PRW_UpdateLumi_addActua
 * `-n` means normalization
 * `--info` means to have an additional text (string) on the plot 
 
+\includepdf{./Plotting_tool/example_plot/CutFF-nInteraction_new_1_03-emme-VBF.pdf}
 
 ![Plot](./Plotting_tool/example_plot/CutFF-nInteraction_new_1_03-emme-VBF.pdf)
 
