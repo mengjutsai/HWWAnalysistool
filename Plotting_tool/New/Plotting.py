@@ -18,7 +18,9 @@ def main(args):
 
     # Check the TQSampleDataReader for the plots
     rd = TQSampleDataReader(SampleFolder)
-    rd.getListOfSampleFolders();
+    
+    list1 = rd.getListOfHistogramNames()
+    list1.Print()
     # if args.printHist:
     #     rd.printListOfHistograms()
     # # Load lists
@@ -100,8 +102,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     import QFramework
-    import ROOT
+    from ROOT import *
     from Plotting_def import *
+
+    # Package to track the time usage
+    import timeit
+    import time
 
     # close to open window when generating plots
     gROOT.SetBatch(True)
