@@ -11,58 +11,58 @@ def main(args):
 
     # if args.flat:
     #     # Load the sample folder in the root file
-        if args.inputfile:
-            SampleFolder = TQSampleFolder.loadSampleFolder(args.inputfile+":samples")
-        else:
-            print("Please pass a input root file!")
+    if args.inputfile:
+        SampleFolder = TQSampleFolder.loadSampleFolder(args.inputfile+":samples")
+    else:
+        print("Please pass a input root file!")
 
-        # Check the TQSampleDataReader for the plots
-        rd = TQSampleDataReader(SampleFolder)
-        rd.getListOfSampleFolders();
-        # if args.printHist:
-        #     rd.printListOfHistograms()
-        # # Load lists
-        # processes = Fun_processes()
-        # channels = Fun_channels()
-        # cuts = Fun_cuts()
-        # plots = Fun_plots()
-        #
-        # # The plots I booked in the PlotSetup
-        # print(processes)
-        # # The cuts I booked in the PlotSetup
-        # print(cuts)
-        #
-        # # Check we have output directory
-        # outputfolder = CheckOutputDirectory(args.outputfolder)
-        #
-        # for i in range(len(processes)):
-        #     for j in range(len(channels)):
-        #         for k in range(len(cuts)):
-        #             for l in range(len(plots)):
-        #                 histogram = PrepareHist(rd, processes[i], channels[j], cuts[k], plots[l])
-        #                 if histogram == 0:
-        #                     continue
-        #                 NormalizeToUnitArea(histogram, args.normalize)
-        #
-        #                 c = prepareCanvas()
-        #
-        #                 SetupHist(histogram)
-        #                 print(channels[j])
-        #                 ATLASstyle(channels[j])
-        #                 DrawInformation(args.info)
-        #
-        #                 # Main legend
-        #                 leg = TLegend(0.60,0.8,0.80,0.85)
-        #                 SetupMainPlotLegend(leg)
-        #                 AddEntry_MainPlotLegend(leg, histogram, processes[i])
-        #                 leg.Draw("SAME")
-        #
-        #                 DrawCutStage(cuts[k], plots[l])
-        #
-        #                 #Subplot legend
-        #                 # leg_sub = TLegend(0.65,0.65,0.85,0.85)
-        #                 print("Store plots in {:s}".format(args.outputfolder))
-        #                 c.SaveAs(outputfolder+cuts[k]+"-"+plots[l]+"-"+channels[j]+"-"+processes[i]+".pdf","pdf")
+    # Check the TQSampleDataReader for the plots
+    rd = TQSampleDataReader(SampleFolder)
+    rd.getListOfSampleFolders();
+    # if args.printHist:
+    #     rd.printListOfHistograms()
+    # # Load lists
+    # processes = Fun_processes()
+    # channels = Fun_channels()
+    # cuts = Fun_cuts()
+    # plots = Fun_plots()
+    #
+    # # The plots I booked in the PlotSetup
+    # print(processes)
+    # # The cuts I booked in the PlotSetup
+    # print(cuts)
+    #
+    # # Check we have output directory
+    # outputfolder = CheckOutputDirectory(args.outputfolder)
+    #
+    # for i in range(len(processes)):
+    #     for j in range(len(channels)):
+    #         for k in range(len(cuts)):
+    #             for l in range(len(plots)):
+    #                 histogram = PrepareHist(rd, processes[i], channels[j], cuts[k], plots[l])
+    #                 if histogram == 0:
+    #                     continue
+    #                 NormalizeToUnitArea(histogram, args.normalize)
+    #
+    #                 c = prepareCanvas()
+    #
+    #                 SetupHist(histogram)
+    #                 print(channels[j])
+    #                 ATLASstyle(channels[j])
+    #                 DrawInformation(args.info)
+    #
+    #                 # Main legend
+    #                 leg = TLegend(0.60,0.8,0.80,0.85)
+    #                 SetupMainPlotLegend(leg)
+    #                 AddEntry_MainPlotLegend(leg, histogram, processes[i])
+    #                 leg.Draw("SAME")
+    #
+    #                 DrawCutStage(cuts[k], plots[l])
+    #
+    #                 #Subplot legend
+    #                 # leg_sub = TLegend(0.65,0.65,0.85,0.85)
+    #                 print("Store plots in {:s}".format(args.outputfolder))
+    #                 c.SaveAs(outputfolder+cuts[k]+"-"+plots[l]+"-"+channels[j]+"-"+processes[i]+".pdf","pdf")
 
 
 
