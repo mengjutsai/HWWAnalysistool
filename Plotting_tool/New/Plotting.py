@@ -18,9 +18,10 @@ def main(args):
 
     # Check the TQSampleDataReader for the plots
     rd = TQSampleDataReader(SampleFolder)
-    
-    list1 = rd.getListOfHistogramNames()
-    list1.Print()
+
+    if args.allplot:
+        list1 = rd.getListOfHistogramNames()
+        list1.Print()
     # if args.printHist:
     #     rd.printListOfHistograms()
     # # Load lists
@@ -76,6 +77,8 @@ if __name__ == "__main__":
     # For the flat mode
     # parser.add_argument('--flat', '-f', dest="flat", action="store_const", const=True, default=False, help='Only run with one root file and create flat plot')
     parser.add_argument('--input', '-i', metavar='INPUT', type=str, dest="inputfile", default="input/20180618_R21_mc16a_p3387_w_PRW_UpdateLumi_v1.root", help='ROOT file with input sample folder')
+    parser.add_argument('--allplot', dest="allplot", default=True, help='Draw all plots in SampleFolder')
+
     # parser.add_argument('--normalize', '-n', dest="normalize", action="store_const", const=True, default=False, help='Normalize the plot to unit area')
     # parser.add_argument('--outputfolder', '-o', metavar='OUTPUT', type=str, dest="outputfolder", default="results/tmp/", help='outputfolder for plots')
     #
